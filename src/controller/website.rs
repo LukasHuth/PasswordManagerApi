@@ -1,4 +1,4 @@
-use diesel::{RunQueryDsl, QueryDsl, ExpressionMethods, TextExpressionMethods, JoinOnDsl, dsl::exists, select, result::Error};
+use diesel::{RunQueryDsl, QueryDsl, ExpressionMethods, TextExpressionMethods, JoinOnDsl, select, dsl::exists};
 use regex::Regex;
 use rocket::{serde::json::Json, http::Status};
 

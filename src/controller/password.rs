@@ -1,12 +1,8 @@
-use aes_gcm::{Aes256Gcm, aead::{generic_array::GenericArray, OsRng, heapless, Aead}, KeyInit, AeadCore, AeadInPlace, Nonce, Key};
-use base64::{engine::general_purpose, Engine};
-//use aes_gcm::{AesGcm, aes::{Aes256, cipher::typenum::{UInt, UTerm}}, aead::{consts::{B1, B0}, Aead, generic_array::GenericArray}, Aes256Gcm, Key, KeyInit};
 use diesel::{QueryResult, QueryDsl, ExpressionMethods, RunQueryDsl, Queryable, JoinOnDsl};
 use regex::Regex;
-use rocket::{serde::{json::Json, Serialize, Deserialize}, http::Status};
+use rocket::{serde::{json::Json, Serialize}, http::Status};
 use crate::{models::passwords as passwords, database, ApiKey};
-// use crypto::cipher::aes;
-//
+
 pub mod utils;
 
 #[get("/passwords/<website_id>")]
